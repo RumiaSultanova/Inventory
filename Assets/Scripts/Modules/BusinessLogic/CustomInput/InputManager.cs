@@ -1,11 +1,11 @@
 ﻿using System;
 using UnityEngine;
 
-namespace Modules.CustomInput
+namespace Modules.BusinessLogic.CustomInput
 {
     public class InputManager : MonoBehaviour
     {
-        public delegate void OnInput(Vector2 touch);
+        public delegate void OnInput(Vector2 screenPoint);
         public event OnInput TouchEnter;
         public event OnInput TouchStay;
         public event OnInput TouchMoved;

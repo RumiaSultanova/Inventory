@@ -3,12 +3,29 @@
   <component name="ChangeListManager">
     <list default="true" id="499aa781-df8e-4c9c-973f-af4ad632fbf3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Inventory/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Inventory/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Inventory/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Inventory/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Inventory/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Inventory/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Inventory.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Inventory.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Prod/ProdMain.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Prod/ProdMain.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/CustomInput/InputManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/CustomInput/InputManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/Inventory/Item/ItemManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/Inventory/Item/ItemManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/Player/DragManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/Player/DragManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/Session/SessionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/Session/SessionManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/CustomInput.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/CustomInput/InputManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/CustomInput/InputManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/Inventory.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/Inventory/Item.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/Inventory/Item/Item.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/Inventory/Item/Item.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/Inventory/Item/ItemManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/Inventory/Item/ItemManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/Player.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/Player/DragManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/Player/DragManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/Player/SnapManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/Player/SnapManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/Session.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/Session/SessionManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/Session/SessionManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,12 +36,16 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Modules/Player/DragManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/rumia/Downloads/Unity/Inventory/Assets/Scripts/Modules/Player/DragManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Modules/UI/Inventory/InventoryUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5990EEDA-2CCC-4C8D-9AB6-99E19088962F/b1/40b4aba5/IDragHandler.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Modules/Session/SessionManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Modules/Inventory/Item/ItemManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/rumia/Downloads/Unity/Inventory/Assets/Scripts/Modules/CustomInput/InputManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../../Program Files/Unity/Hub/Editor/2019.4.4f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Image.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Model/Item/ItemType.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Modules/Player/SnapManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/rumia/Downloads/Unity/Inventory/Assets/Scripts/Modules/Inventory/Item/ItemManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/rumia/Downloads/Unity/Inventory/Assets/Scripts/Modules/Session/SessionManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Modules/Utils/AssetNames.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Modules/UI/Inventory/ItemUI.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -51,12 +72,29 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Modules/Session/SessionManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Modules/Inventory/Item/Snapzone.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Modules/Inventory/Item/ItemManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Modules/Player/DragManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Modules/Player/SnapManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Modules/Player/DragManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Modules/Utils/FaceCamera.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Modules/UI/Inventory/Item.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Modules/BusinessLogic/Inventory/InventoryManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Modules/UI/Inventory/ItemUI.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Modules/Utils/LookToCamera.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Modules/BusinessLogic/Inventory/Inventory.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Modules/BusinessLogic/Inventory/Item/Item.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Modules/BusinessLogic/CustomInput/InputManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Modules/BusinessLogic/Inventory/Item/ItemData.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Modules/BusinessLogic/Player/DragManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Modules/BusinessLogic/Player/SnapManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Modules/BusinessLogic/Session/SessionManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Modules/BusinessLogic/Player/InventoryManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Modules/Utils/AssetNames.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Modules/UI/Inventory/InventoryUI.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1n8xY0CUbB59OFFMoFtaRD95Yhe" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -98,7 +136,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1610785565165</updated>
-      <workItem from="1610785581560" duration="11402000" />
+      <workItem from="1610785581560" duration="15212000" />
     </task>
     <task id="LOCAL-00001" summary="Initial">
       <created>1610790575728</created>
@@ -128,7 +166,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610795282103</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Snap items to bag">
+      <created>1610799730653</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1610799730653</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -152,6 +197,7 @@
     <MESSAGE value="Initial" />
     <MESSAGE value="Item drag handler" />
     <MESSAGE value="Input manager &amp; New items drag manager" />
-    <option name="LAST_COMMIT_MESSAGE" value="Input manager &amp; New items drag manager" />
+    <MESSAGE value="Snap items to bag" />
+    <option name="LAST_COMMIT_MESSAGE" value="Snap items to bag" />
   </component>
 </project>

@@ -1,9 +1,9 @@
 ﻿using Model.Item;
 using UnityEngine;
 
-namespace Modules.Inventory.Item
+namespace Modules.BusinessLogic.Inventory.Item
 {
-    public class Item : MonoBehaviour
+    public class ItemData : MonoBehaviour
     {
         [SerializeField] private int id;
         [SerializeField] private ItemType type;

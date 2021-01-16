@@ -13,21 +13,34 @@
             </e>
           </e>
           <e p="Modules" t="Include">
-            <e p="CustomInput" t="Include">
-              <e p="InputManager.cs" t="Include" />
-            </e>
-            <e p="Inventory" t="Include">
-              <e p="Item" t="Include">
-                <e p="Item.cs" t="Include" />
-                <e p="ItemManager.cs" t="Include" />
+            <e p="BusinessLogic" t="Include">
+              <e p="CustomInput" t="Include">
+                <e p="InputManager.cs" t="Include" />
+              </e>
+              <e p="Inventory" t="Include">
+                <e p="Item" t="Include">
+                  <e p="Item.cs" t="Include" />
+                  <e p="ItemData.cs" t="Include" />
+                </e>
+              </e>
+              <e p="Player" t="Include">
+                <e p="DragManager.cs" t="Include" />
+                <e p="InventoryManager.cs" t="Include" />
+                <e p="SnapManager.cs" t="Include" />
+              </e>
+              <e p="Session" t="Include">
+                <e p="SessionManager.cs" t="Include" />
               </e>
             </e>
-            <e p="Player" t="Include">
-              <e p="DragManager.cs" t="Include" />
-              <e p="SnapManager.cs" t="Include" />
+            <e p="UI" t="Include">
+              <e p="Inventory" t="Include">
+                <e p="InventoryUI.cs" t="Include" />
+                <e p="ItemUI.cs" t="Include" />
+              </e>
             </e>
-            <e p="Session" t="Include">
-              <e p="SessionManager.cs" t="Include" />
+            <e p="Utils" t="Include">
+              <e p="AssetNames.cs" t="Include" />
+              <e p="LookToCamera.cs" t="Include" />
             </e>
           </e>
         </e>

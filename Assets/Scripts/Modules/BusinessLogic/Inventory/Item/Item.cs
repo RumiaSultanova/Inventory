@@ -1,21 +1,21 @@
 ﻿using UnityEngine;
 
-namespace Modules.Inventory.Item
+namespace Modules.BusinessLogic.Inventory.Item
 {
-    [RequireComponent(typeof(Item))]
-    public class ItemManager : MonoBehaviour
+    [RequireComponent(typeof(ItemData))]
+    public class Item : MonoBehaviour
     {
         [SerializeField] private Transform snapzone;
         public Transform Snapzone => snapzone;
 
-        public Item Item { get; private set; }
+        public ItemData ItemData { get; private set; }
     
         private Rigidbody _rigidbody;
         private Collider _collider;
         
         private void Awake()
         {
-            Item = gameObject.GetComponent<Item>();
+            ItemData = gameObject.GetComponent<ItemData>();
 
             _rigidbody = GetComponentInChildren<Rigidbody>();
             _collider = GetComponentInChildren<Collider>();
