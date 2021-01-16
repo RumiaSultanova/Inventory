@@ -13,6 +13,10 @@ namespace Modules.Player
         private Plane _plane;
         private ItemManager _item;
     
+        public delegate void OnItem(ItemManager touch);
+        public event OnItem ItemReleased;
+
+        
         public DragManager(InputManager inputManager)
         {
             inputManager.TouchEnter += InputManagerOnTouchEnter;
@@ -25,7 +29,8 @@ namespace Modules.Player
 
         private void InputManagerOnTouchEnter(Vector2 touch)
         {
-            if (Physics.Raycast(_cam.ScreenPointToRay(touch), out var hit, _itemLayer))
+            if (Physics.Raycast(_cam.ScreenPointToRay(touch), out var hit, _itemLayer) &&
+                (_item = hit.collider.GetComponent<ItemManager>()))
             {
                 _item = hit.collider.GetComponent<ItemManager>();
                 _item.DisablePhysics();
@@ -47,6 +52,7 @@ namespace Modules.Player
             if (_item)
             {
                 _item.EnablePhysics();
+                ItemReleased?.Invoke(_item);
                 _item = null;
             }
         }

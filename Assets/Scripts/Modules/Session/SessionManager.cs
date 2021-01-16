@@ -8,12 +8,14 @@ namespace Modules.Session
     {
         public InputManager InputManager { get; private set; }
         public DragManager DragManager { get; private set; }
+        public SnapManager SnapManager { get; private set; }
         
         private void Awake()
         {
             InputManager = gameObject.AddComponent<InputManager>();
 
             DragManager = new DragManager(InputManager);
+            SnapManager = new SnapManager(DragManager);
         }
     }
 }

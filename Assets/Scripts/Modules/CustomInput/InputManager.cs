@@ -6,7 +6,6 @@ namespace Modules.CustomInput
     public class InputManager : MonoBehaviour
     {
         public delegate void OnInput(Vector2 touch);
-
         public event OnInput TouchEnter;
         public event OnInput TouchStay;
         public event OnInput TouchMoved;

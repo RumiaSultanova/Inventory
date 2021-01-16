@@ -4,13 +4,11 @@
     <list default="true" id="499aa781-df8e-4c9c-973f-af4ad632fbf3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Inventory/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Inventory/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Inventory/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Inventory/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/3D/Item.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/3D/Item.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Prod/ProdMain.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Prod/ProdMain.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/Inventory/Item/Item.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/Inventory/Item/Item.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/Inventory/Item/ItemDragHandler.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/Inventory/Item/ItemDragHandler.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/Session/SessionController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/Session/SessionController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/CustomInput/InputManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/CustomInput/InputManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/Inventory/Item/ItemManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/Inventory/Item/ItemManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/Player/DragManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/Player/DragManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/Session/SessionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/Session/SessionManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,10 +22,9 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Modules/Player/DragManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5990EEDA-2CCC-4C8D-9AB6-99E19088962F/b1/40b4aba5/IDragHandler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Modules/Session/SessionManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Modules/Inventory/Item/Snapzone.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Modules/Inventory/Item/ItemManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Model/Item/ItemType.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Modules/Inventory/Item/ItemSnapHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Modules/Player/SnapManager.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -40,7 +37,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Model/Item/ItemType.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Modules/Session/SessionController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Modules/Inventory/Item/Item.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Modules/Inventory/Item/Snapzone.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Modules/Player/InputManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Modules/Input/Args/StartArgs.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Modules/Input/Args/InProgressArgs.cs" />
@@ -49,11 +45,14 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Modules/Input/InputManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Modules/InputService/InputService.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Modules/InputService/InputManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Modules/Inventory/Item/ItemDragHandler.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Modules/Inventory/Snapzone.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Modules/CustomInput/InputManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Modules/Session/SessionManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Modules/Inventory/Item/ItemDragHandler.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Modules/Inventory/Item/Snapzone.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Modules/Inventory/Item/ItemManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Modules/Player/DragManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Modules/Player/SnapManager.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1n8xY0CUbB59OFFMoFtaRD95Yhe" />
@@ -99,7 +98,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1610785565165</updated>
-      <workItem from="1610785581560" duration="8463000" />
+      <workItem from="1610785581560" duration="11402000" />
     </task>
     <task id="LOCAL-00001" summary="Initial">
       <created>1610790575728</created>
@@ -115,7 +114,21 @@
       <option name="project" value="LOCAL" />
       <updated>1610790633422</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Input manager &amp; New items drag manager">
+      <created>1610795153625</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1610795153625</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Input manager &amp; New items drag manager">
+      <created>1610795282103</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1610795282103</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -138,25 +151,7 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Initial" />
     <MESSAGE value="Item drag handler" />
-    <option name="LAST_COMMIT_MESSAGE" value="Item drag handler" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Modules/Player/DragManager.cs</url>
-          <line>26</line>
-          <properties documentPath="C:\Users\rumia\Downloads\Unity\Inventory\Assets\Scripts\Modules\Player\DragManager.cs" initialLine="26" containingFunctionPresentation="method 'InputManagerOnTouchEnter'">
-            <startOffsets>
-              <option value="754" />
-            </startOffsets>
-            <endOffsets>
-              <option value="755" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Input manager &amp; New items drag manager" />
+    <option name="LAST_COMMIT_MESSAGE" value="Input manager &amp; New items drag manager" />
   </component>
 </project>
