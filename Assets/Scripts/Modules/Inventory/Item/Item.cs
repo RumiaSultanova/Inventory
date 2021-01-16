@@ -1,20 +1,13 @@
 ﻿using Model.Item;
+using UnityEngine;
 
 namespace Modules.Inventory.Item
 {
-    public class Item
+    public class Item : MonoBehaviour
     {
-        public int Id { get; }
-        public ItemType Type { get; }
-        public string Name { get; }
-        public float Width { get; }
-
-        public Item(int id, ItemType type, string name, float width)
-        {
-            Id = id;
-            Type = type;
-            Name = name;
-            Width = width;
-        }
+        [SerializeField] private int id;
+        [SerializeField] private ItemType type;
+        [SerializeField] private string itemName;
+        [SerializeField] private float width;
     }
 }
