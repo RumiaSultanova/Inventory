@@ -1,4 +1,5 @@
 ﻿using Modules.BusinessLogic.CustomInput;
+using Modules.BusinessLogic.Inventory;
 using Modules.BusinessLogic.Player;
 using UnityEngine;
 

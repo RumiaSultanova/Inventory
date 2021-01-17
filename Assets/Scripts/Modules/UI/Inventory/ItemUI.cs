@@ -1,47 +1,36 @@
-﻿using UnityEngine;
+﻿using Modules.BusinessLogic.Inventory.Item;
+using UnityEngine;
 using UnityEngine.UI;
 
 namespace Modules.UI.Inventory
 {
     public class ItemUI : MonoBehaviour
     {
-        [SerializeField] private GameObject activeState;
-        [SerializeField] private GameObject disabledState;
-
         [SerializeField] private Text nameText;
         [SerializeField] private Image iconImage;
+
+        private Item _item;
 
         private void Awake()
         {
             Deactivate();
         }
 
-        public void SetItem(string itemName, Sprite icon)
+        public void SetItem(Item item)
         {
-            nameText.text = itemName;
-            iconImage.sprite = icon;
-            Activate();
+            nameText.text = item.ItemData.ItemName;
+            iconImage.sprite = item.ItemData.Sprite;
         }
 
         public void Reset()
         {
             Deactivate();
         }
-        
-        private void Activate()
-        {
-            SwitchState(true);
-        }
 
         private void Deactivate()
         {
-            SwitchState(false);
-        }
-
-        private void SwitchState(bool state)
-        {
-            activeState.SetActive(state);
-            disabledState.SetActive(!state);
+            nameText.text = "";
+            iconImage.sprite = null;
         }
     }
 }

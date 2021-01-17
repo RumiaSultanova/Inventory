@@ -10,25 +10,36 @@ namespace Modules.UI.Inventory
     {
         [SerializeField] private Transform content;
 
-        private List<(bool, ItemUI)> _items = new List<(bool, ItemUI)>();
+        private readonly List<(bool, ItemUI)> _cells = new List<(bool, ItemUI)>();
         
         private const int MaxCount = 3;
         
         private void Awake()
         {
+            SetupUI();
+        }
+
+        private async void SetupUI()
+        {
             for (int i = 0; i < MaxCount; i++)
             {
-                var itemUI = Addressables.InstantiateAsync(AssetNames.ItemUI).Result;
-                itemUI.transform.SetParent(content);
-                _items.Add((false, itemUI.GetComponent<ItemUI>()));
+                var itemUI =  await Addressables.InstantiateAsync(AssetNames.ItemUI).Task;
+                itemUI.transform.SetParent(content, false);
+                _cells.Add((false, itemUI.GetComponent<ItemUI>()));
             }
         }
 
         public void Add(Item item)
         {
-            foreach (var itemUI in _items)
+            for (var i = 0; i < _cells.Count; i++)
             {
+                var cell = _cells[i];
+                if (cell.Item1) { continue; }
                 
+                cell.Item1 = true;
+                cell.Item2.SetItem(item);
+                _cells[i] = cell;
+                break;
             }
         }
     }

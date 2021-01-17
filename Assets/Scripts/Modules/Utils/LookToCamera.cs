@@ -9,6 +9,8 @@ namespace Modules.Utils
         private Camera _camera;
 
         private Canvas _canvas;
+
+        [SerializeField] private float speed = 2f;
         
         private void Awake()
         {
@@ -26,7 +28,7 @@ namespace Modules.Utils
 
             vector.x = 0f;
             var direction = Quaternion.LookRotation(vector);
-            transform.rotation = Quaternion.Lerp(transform.rotation, direction, Time.deltaTime);
+            transform.rotation = Quaternion.Lerp(transform.rotation, direction, speed * Time.deltaTime);
         }
     }
 }
