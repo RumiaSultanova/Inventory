@@ -23,7 +23,8 @@ namespace Modules.BusinessLogic.DataProvider
             
             var request = new RestRequest(Method.POST);
             request.AddHeader("Auth", Auth);
-            request.AddJsonBody($"\"{{message\":\" {id} {state} \"}}");
+            request.AddParameter("ID", id);
+            request.AddParameter("State", state);
             
             var response = client.ExecutePostTaskAsync(request).Result;
             Debug.Log($"Response. {response.IsSuccessful}: {response.Content}");
