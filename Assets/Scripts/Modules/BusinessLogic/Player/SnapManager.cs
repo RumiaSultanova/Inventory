@@ -27,6 +27,11 @@ namespace Modules.BusinessLogic.Player
             session.InventoryManager.Selected += InventoryManagerOnSelected;
         }
 
+        /// <summary>
+        /// Check if item released on bag to smoothly snap it to bag and add it to inventory
+        /// </summary>
+        /// <param name="item">Released item</param>
+        /// <param name="screenPoint">Point in screen dimension</param>
         private void DragManagerOnItemReleased(Item item, Vector2 screenPoint)
         {
             if (_inputManager.CheckBagTouched(screenPoint))
@@ -37,12 +42,22 @@ namespace Modules.BusinessLogic.Player
             }
         }
 
+        /// <summary>
+        /// Unsnap item from bag and smoothly move it to mouse, then drop (because need to long tab to drag item) 
+        /// </summary>
+        /// <param name="item">Last touched item</param>
         private void InventoryManagerOnSelected(Item item)
         {
             item.StopAllCoroutines();
             item.StartCoroutine(SnapToMouse(item));
         }
         
+        /// <summary>
+        /// Smooth movement to snap zone transform
+        /// </summary>
+        /// <param name="item">Snapping item</param>
+        /// <param name="target">Snap zone transform</param>
+        /// <returns></returns>
         private IEnumerator SnapToTransform(Item item, Transform target)
         {
             while (Vector3.Distance(item.transform.position, target.position) > MaxDistance)
@@ -54,6 +69,11 @@ namespace Modules.BusinessLogic.Player
             yield return null;
         }
 
+        /// <summary>
+        /// Smooth movement to mouse position
+        /// </summary>
+        /// <param name="item">Snapping item</param>
+        /// <returns></returns>
         private IEnumerator SnapToMouse(Item item)
         {
             _dragManager.StartMove();

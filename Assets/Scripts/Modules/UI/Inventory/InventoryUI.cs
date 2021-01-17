@@ -23,6 +23,9 @@ namespace Modules.UI.Inventory
             SetupGrid();
         }
 
+        /// <summary>
+        /// Add items UI to inventory UI and subscribe to item selection
+        /// </summary>
         private async void SetupGrid()
         {
             for (var i = 0; i < MaxCount; i++)
@@ -34,6 +37,10 @@ namespace Modules.UI.Inventory
             }
         }
 
+        /// <summary>
+        /// Add item to inventory and fill cell data fields
+        /// </summary>
+        /// <param name="item">Added item</param>
         public void AddItem(Item item)
         {
             for (var i = 0; i < _cells.Count; i++)
@@ -48,6 +55,10 @@ namespace Modules.UI.Inventory
             }
         }
 
+        /// <summary>
+        /// Remove item from inventory and reset its data fields
+        /// </summary>
+        /// <param name="item">Item to remove</param>
         public void SelectItem(Item item)
         {
             for (var i = 0; i < _cells.Count; i++)
@@ -58,16 +69,23 @@ namespace Modules.UI.Inventory
                     cell.Item2.Reset();
                     cell.Item1 = false;
                     _cells[i] = cell;
+                    return;
                 }
             }
 
         }
 
+        /// <summary>
+        /// Activate inventory UI
+        /// </summary>
         public void Activate()
         {
             canvas.enabled = true;
         }
 
+        /// <summary>
+        /// Deactivate inventory UI
+        /// </summary>
         public void Deactivate()
         {
             canvas.enabled = false;

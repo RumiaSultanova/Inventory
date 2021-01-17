@@ -20,6 +20,9 @@ namespace Modules.BusinessLogic.Session
 
         private readonly List<Manager> _managers = new List<Manager>();
         
+        /// <summary>
+        /// Add managers to scene
+        /// </summary>
         private void Awake()
         {
             InputManager = gameObject.AddComponent<InputManager>();
@@ -30,6 +33,9 @@ namespace Modules.BusinessLogic.Session
             _managers.Add(DataProviderManager = new DataProviderManager());
         }
 
+        /// <summary>
+        /// Initialize current scene managers
+        /// </summary>
         private void Start()
         {
             foreach (var manager in _managers)

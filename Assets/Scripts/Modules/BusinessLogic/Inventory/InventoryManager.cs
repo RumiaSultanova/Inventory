@@ -24,31 +24,32 @@ namespace Modules.BusinessLogic.Inventory
             (_inputManager = session.InputManager).TouchEnter += InputManagerOnTouchEnter;
         }
 
+        /// <summary>
+        /// Add item to inventory when item snapping to bag
+        /// </summary>
+        /// <param name="item">Snapped item</param>
         private void SnapManagerOnItemAdded(Item.Item item)
         {
             _inventoryUI.AddItem(item);
             Added?.Invoke(item);
         }
         
-        private void InventoryOnPointerExit(Item.Item item)
-        {
-            if (!_inputManager.IsTouching)
-            {
-                _inventoryUI.SelectItem(item);
-                Selected?.Invoke(item);
-            }
-        }
-        
+        /// <summary>
+        /// Activate inventory if mouse pressed on bag
+        /// </summary>
+        /// <param name="screenPoint">Point in screen dimension</param>
         private void InputManagerOnTouchEnter(Vector2 screenPoint)
         {
             if (_inputManager.CheckBagTouched(screenPoint))
             {
-                _inventoryUI.Activate();
-                _inputManager.TouchMoved += InputManagerOnTouchMoved;
-                _inputManager.TouchExit += DeactivateInventory;
+                ActivateInventory();
             }
         }
         
+        /// <summary>
+        /// Deactivate inventory if mouse not on bag or its UI
+        /// </summary>
+        /// <param name="screenPoint">Point in screen dimension</param>
         private void InputManagerOnTouchMoved(Vector2 screenPoint)
         {
             if (!(_inputManager.CheckBagTouched(screenPoint) || _inputManager.CheckUITouched()))
@@ -57,6 +58,33 @@ namespace Modules.BusinessLogic.Inventory
             }
         }
         
+        /// <summary>
+        /// Check if mouse stop pressing on item UI to select
+        /// </summary>
+        /// <param name="item">Last touched item</param>
+        private void InventoryOnPointerExit(Item.Item item)
+        {
+            if (!_inputManager.IsTouching)
+            {
+                _inventoryUI.SelectItem(item);
+                Selected?.Invoke(item);
+            }
+        }
+
+        /// <summary>
+        /// Activate inventory UI and subscribe to deactivate if mouse stop pressing or moved from bag or its UI
+        /// </summary>
+        private void ActivateInventory()
+        {
+            _inventoryUI.Activate();
+            _inputManager.TouchMoved += InputManagerOnTouchMoved;
+            _inputManager.TouchExit += DeactivateInventory;
+        }
+        
+        /// <summary>
+        /// Deactivates inventory UI and unsubscribe from events
+        /// </summary>
+        /// <param name="screenPoint"></param>
         private void DeactivateInventory(Vector2 screenPoint)
         {
             _inventoryUI.Deactivate();

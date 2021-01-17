@@ -24,6 +24,9 @@ namespace Modules.UI.Inventory
             Reset();
         }
 
+        /// <summary>
+        /// Initialize listener to stop pressing mouse on its UI
+        /// </summary>
         private void SetupTrigger()
         {
             _trigger = gameObject.AddComponent<EventTrigger>();
@@ -33,6 +36,10 @@ namespace Modules.UI.Inventory
             _trigger.triggers.Add(pointerExit);
         }
 
+        /// <summary>
+        /// Add new item to UI, make interactable and fill name text field and icon image
+        /// </summary>
+        /// <param name="item">Added item</param>
         public void AddItem(Item item)
         {
             Item = item;
@@ -44,6 +51,9 @@ namespace Modules.UI.Inventory
             _trigger.enabled = true;
         }
 
+        /// <summary>
+        /// Remove item data from UI and make non-interactable 
+        /// </summary>
         public void Reset()
         {
             nameText.text = "";

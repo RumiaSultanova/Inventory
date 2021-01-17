@@ -30,6 +30,9 @@ namespace Modules.BusinessLogic.CustomInput
             _bagLayer = LayerMask.GetMask("Bag");
         }
 
+        /// <summary>
+        /// Check if mouse clicked and call certain events of start, hover and finish of input 
+        /// </summary>
         private void Update()
         {
             if (Input.GetMouseButtonDown(0))
@@ -52,6 +55,12 @@ namespace Modules.BusinessLogic.CustomInput
             }
         }
 
+        /// <summary>
+        ///  Raycast from screenPoint to check if there is an object of Item layer
+        /// </summary>
+        /// <param name="screenPoint">Point in screen dimension</param>
+        /// <param name="item">If there is an object with component ot Item type fill out param with value</param>
+        /// <returns>If there is an object with component ot Item type</returns>
         public bool CheckItemTouched(Vector2 screenPoint, out Item item)
         {
             if (Physics.Raycast(cam.ScreenPointToRay(screenPoint), out var hit, 100f, _itemLayer))
@@ -64,11 +73,20 @@ namespace Modules.BusinessLogic.CustomInput
             return false;
         }
 
+        /// <summary>
+        ///  Raycast from screenPoint to check if there is an object on Bag layer
+        /// </summary>
+        /// <param name="screenPoint">Point in screen dimension</param>
+        /// <returns>If there is an object on Bag layer</returns>
         public bool CheckBagTouched(Vector2 screenPoint)
         {
             return Physics.Raycast(cam.ScreenPointToRay(screenPoint), out _, 100f, _bagLayer);
         }
 
+        /// <summary>
+        /// Check if mouse is over UI
+        /// </summary>
+        /// <returns>if mouse is over UI</returns>
         public bool CheckUITouched()
         {
             return EventSystem.current.IsPointerOverGameObject();

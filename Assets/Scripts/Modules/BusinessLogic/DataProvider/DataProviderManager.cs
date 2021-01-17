@@ -17,6 +17,11 @@ namespace Modules.BusinessLogic.DataProvider
             session.InventoryManager.Selected += item => ChangeItemStatus(item.ItemData.ID, ItemState.Select);
         }
 
+        /// <summary>
+        /// Send post request to server with changed item state
+        /// </summary>
+        /// <param name="id">Item unique id</param>
+        /// <param name="state">Updated item state</param>
         public void ChangeItemStatus(int id, ItemState state)
         {
             var client = new RestClient(StatusURL) {Timeout = -1};
