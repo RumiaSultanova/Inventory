@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using Modules.BusinessLogic.Core;
 using Modules.BusinessLogic.CustomInput;
+using Modules.BusinessLogic.DataProvider;
 using Modules.BusinessLogic.Inventory;
 using Modules.BusinessLogic.Player;
 using UnityEngine;
@@ -15,6 +16,7 @@ namespace Modules.BusinessLogic.Session
         public DragManager DragManager { get; private set; }
         public SnapManager SnapManager { get; private set; }
         public InventoryManager InventoryManager { get; private set; }
+        public DataProviderManager DataProviderManager { get; private set; }
 
         private readonly List<Manager> _managers = new List<Manager>();
         
@@ -25,6 +27,7 @@ namespace Modules.BusinessLogic.Session
             _managers.Add(DragManager = new DragManager());
             _managers.Add(SnapManager = new SnapManager());
             _managers.Add(InventoryManager = new InventoryManager());
+            _managers.Add(DataProviderManager = new DataProviderManager());
         }
 
         private void Start()

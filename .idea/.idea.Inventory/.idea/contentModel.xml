@@ -9,6 +9,7 @@
         <e p="Scripts" t="Include">
           <e p="Model" t="Include">
             <e p="Item" t="Include">
+              <e p="ItemState.cs" t="Include" />
               <e p="ItemType.cs" t="Include" />
             </e>
           </e>
@@ -19,6 +20,9 @@
               </e>
               <e p="CustomInput" t="Include">
                 <e p="InputManager.cs" t="Include" />
+              </e>
+              <e p="DataProvider" t="Include">
+                <e p="DataProviderManager.cs" t="Include" />
               </e>
               <e p="Inventory" t="Include">
                 <e p="InventoryManager.cs" t="Include" />

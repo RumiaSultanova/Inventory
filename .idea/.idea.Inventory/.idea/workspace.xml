@@ -7,16 +7,8 @@
     <list default="true" id="499aa781-df8e-4c9c-973f-af4ad632fbf3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Inventory/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Inventory/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Inventory/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Inventory/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Inventory.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Inventory.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Item.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Item.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Prod/ProdMain.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Prod/ProdMain.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/BusinessLogic/CustomInput/InputManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/BusinessLogic/CustomInput/InputManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/BusinessLogic/Inventory/InventoryManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/BusinessLogic/Inventory/InventoryManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/BusinessLogic/Player/DragManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/BusinessLogic/Player/DragManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/BusinessLogic/Player/SnapManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/BusinessLogic/Player/SnapManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/BusinessLogic/Session/SessionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/BusinessLogic/Session/SessionManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/UI/Inventory/InventoryUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/UI/Inventory/InventoryUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/UI/Inventory/ItemUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/UI/Inventory/ItemUI.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,28 +19,37 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Modules/BusinessLogic/Inventory/InventoryManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Modules/BusinessLogic/Core/Manager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A979F18D-51AF-4117-9D12-B797E8C5BE14/d0/d69061d1/UnitySynchronizationContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/rumia/Downloads/Unity/Personal/Inventory/Assets/Prefabs/UI/Inventory.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../../../../Program Files/Unity/Hub/Editor/2019.4.4f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/EventTriggerType.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/rumia/Downloads/Unity/Personal/Inventory/Assets/Prefabs/UI/Inventory.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/rumia/Downloads/Unity/Personal/Inventory/Assets/Scripts/Modules/BusinessLogic/Player/DragManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/rumia/Downloads/Unity/Personal/Inventory/Assets/AddressableAssetsData/AddressableAssetSettings.asset" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5990EEDA-2CCC-4C8D-9AB6-99E19088962F/b1/40b4aba5/IDragHandler.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/rumia/Downloads/Unity/Personal/Inventory/Assets/Scripts/Modules/BusinessLogic/Inventory/InventoryManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/rumia/Downloads/Unity/Personal/Inventory/Assets/Scripts/Modules/BusinessLogic/Session/SessionManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Modules/UI/Inventory/InventoryUI.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Modules/Utils/AssetNames.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Modules/UI/Inventory/ItemUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../../../Program Files/Unity/Hub/Editor/2019.4.4f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/EventSystem.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/rumia/Downloads/Unity/Personal/Inventory/Assets/Scripts/Modules/BusinessLogic/Player/SnapManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Model/Item/ItemType.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/rumia/Downloads/Unity/Personal/Inventory/Assets/Scripts/Modules/BusinessLogic/Inventory/CustomInput/InputManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/FB001E01-371B-4ADC-A200-13E0AC763896/4b/77efe45f/SynchronizationContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/rumia/Downloads/Unity/Personal/Inventory/Assets/Scripts/Modules/UI/Inventory/InventoryUI.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/rumia/Downloads/Unity/Personal/Inventory/Assets/Scripts/Modules/BusinessLogic/Player/SnapManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/rumia/Downloads/Unity/Personal/Inventory/Assets/Scripts/Modules/UI/Inventory/InventoryUI.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/rumia/Downloads/Unity/Personal/Inventory/Assets/Scripts/Modules/BusinessLogic/Player/DragManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/rumia/Downloads/Unity/Personal/Inventory/Assets/Scripts/Modules/BusinessLogic/Player/DragManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Modules/BusinessLogic/Inventory/InventoryManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A979F18D-51AF-4117-9D12-B797E8C5BE14/d0/d69061d1/UnitySynchronizationContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../../../Program Files/Unity/Hub/Editor/2019.4.4f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/EventTriggerType.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/rumia/Downloads/Unity/Personal/Inventory/Assets/Scripts/Modules/BusinessLogic/Player/DragManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Modules/BusinessLogic/DataProvider/DataProviderManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/rumia/Downloads/Unity/Personal/Inventory/Assets/Scripts/Modules/UI/Inventory/InventoryUI.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/rumia/Downloads/Unity/Personal/Inventory/Assets/AddressableAssetsData/AddressableAssetSettings.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/rumia/Downloads/Unity/Personal/Inventory/Assets/Scripts/Modules/UI/Inventory/ItemUI.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/rumia/Downloads/Unity/Personal/Inventory/Assets/Scripts/Modules/BusinessLogic/Inventory/InventoryManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/rumia/Downloads/Unity/Personal/Inventory/Assets/Scripts/Modules/BusinessLogic/Session/SessionManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/rumia/Downloads/Unity/Personal/Inventory/Assets/Scripts/Modules/BusinessLogic/Player/SnapManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Modules/UI/Inventory/InventoryUI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Modules/Utils/AssetNames.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/rumia/Downloads/Unity/Personal/Inventory/Assets/Scripts/Modules/BusinessLogic/Inventory/InventoryManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Modules/UI/Inventory/ItemUI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/rumia/Downloads/Unity/Personal/Inventory/Assets/Scripts/Modules/BusinessLogic/Player/SnapManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/rumia/Downloads/Unity/Personal/Inventory/Assets/Scripts/Modules/BusinessLogic/Session/SessionManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Model/Item/ItemType.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/rumia/Downloads/Unity/Personal/Inventory/Assets/Prefabs/UI/Inventory.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/rumia/Downloads/Unity/Personal/Inventory/Assets/Scripts/Modules/BusinessLogic/Inventory/CustomInput/InputManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/FB001E01-371B-4ADC-A200-13E0AC763896/4b/77efe45f/SynchronizationContext.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -91,13 +92,16 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Modules/BusinessLogic/Session/LevelManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Modules/BusinessLogic/Session/Level.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Modules/BusinessLogic/Core/Manager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Modules/BusinessLogic/Session/SessionManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Modules/BusinessLogic/Player/DragManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Modules/BusinessLogic/Player/SnapManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Modules/BusinessLogic/CustomInput/InputManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Modules/UI/Inventory/ItemUI.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Modules/BusinessLogic/Inventory/InventoryManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Modules/BusinessLogic/Player/DragManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Modules/UI/Inventory/InventoryUI.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Model/Item/ItemState.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Modules/BusinessLogic/Session/SessionManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Modules/BusinessLogic/Inventory/InventoryManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Modules/BusinessLogic/DataProvider/DataProviderManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/test.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1n8xY0CUbB59OFFMoFtaRD95Yhe" />
@@ -147,7 +151,7 @@
       <updated>1610785565165</updated>
       <workItem from="1610785581560" duration="15714000" />
       <workItem from="1610877017373" duration="5005000" />
-      <workItem from="1610883341540" duration="14706000" />
+      <workItem from="1610883341540" duration="16830000" />
     </task>
     <task id="LOCAL-00001" summary="Initial">
       <created>1610790575728</created>
@@ -205,7 +209,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610890900653</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Select item added">
+      <created>1610900636945</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1610900636945</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -233,6 +244,7 @@
     <MESSAGE value="Snap items to bag" />
     <MESSAGE value="wip: UI" />
     <MESSAGE value="Inventory UI logic added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Inventory UI logic added" />
+    <MESSAGE value="Select item added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Select item added" />
   </component>
 </project>

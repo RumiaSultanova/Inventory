@@ -13,6 +13,7 @@ namespace Modules.BusinessLogic.Inventory
         private InputManager _inputManager;
 
         public delegate void OnInput(Item.Item item);
+        public event OnInput Added;
         public event OnInput Selected;
         
         public override void Inject(SessionManager session)
@@ -26,6 +27,7 @@ namespace Modules.BusinessLogic.Inventory
         private void SnapManagerOnItemAdded(Item.Item item)
         {
             _inventoryUI.AddItem(item);
+            Added?.Invoke(item);
         }
         
         private void InventoryOnPointerExit(Item.Item item)
