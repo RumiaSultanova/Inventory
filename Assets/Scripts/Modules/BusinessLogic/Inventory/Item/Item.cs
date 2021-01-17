@@ -21,12 +21,18 @@ namespace Modules.BusinessLogic.Inventory.Item
             _collider = GetComponentInChildren<Collider>();
         }
 
+        /// <summary>
+        /// Enable physics after manual interaction to allow object interact with virtual world
+        /// </summary>
         public void EnablePhysics()
         {
             _rigidbody.isKinematic = false;
             _collider.enabled = true;
         }
 
+        /// <summary>
+        /// Disable physics to allow manual interaction with object
+        /// </summary>
         public void DisablePhysics()
         {
             _rigidbody.isKinematic = true;

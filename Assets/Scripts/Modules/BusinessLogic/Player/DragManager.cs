@@ -1,68 +1,110 @@
-﻿using Modules.BusinessLogic.CustomInput;
+﻿using Modules.BusinessLogic.Core;
+using Modules.BusinessLogic.CustomInput;
 using Modules.BusinessLogic.Inventory.Item;
+using Modules.BusinessLogic.Session;
 using UnityEngine;
 
 namespace Modules.BusinessLogic.Player
 {
-    public class DragManager
+    public class DragManager : Manager
     {
-        private readonly Camera _cam;
-        private readonly LayerMask _itemLayer;
         private const float GapFromGround = 1;
 
         private Plane _plane;
         private Item _item;
-    
-        public delegate void OnItem(Item item);
+
+        private InputManager _inputManager;
+        
+        public delegate void OnItem(Item item, Vector2 screenPoint);
         public event OnItem ItemReleased;
         
-        public DragManager(InputManager inputManager)
+        public override void Inject(SessionManager session)
         {
-            inputManager.TouchEnter += InputManagerOnTouchEnter;
-            inputManager.TouchMoved += InputManagerOnTouchMoved;
-            inputManager.TouchExit += InputManagerOnTouchExit;
-        
-            _cam = Camera.main;
-            _itemLayer = LayerMask.NameToLayer("Item");
+            (_inputManager = session.InputManager).TouchEnter += InputManagerOnTouchEnter;
         }
 
+        /// <summary>
+        /// Check if mouse pressed on object with Item component to start dragging it
+        /// </summary>
+        /// <param name="screenPoint">Point in screen dimension</param>
         private void InputManagerOnTouchEnter(Vector2 screenPoint)
         {
-            if (Physics.Raycast(_cam.ScreenPointToRay(screenPoint), out var hit, _itemLayer) &&
-                (_item = hit.collider.GetComponent<Item>()))
+            if (_inputManager.CheckItemTouched(screenPoint, out _item))
             {
-                _item = hit.collider.GetComponent<Item>();
                 _item.DisablePhysics();
-                
-                _plane = new Plane(Vector3.up, Vector3.up * GapFromGround);
-            }
-        }
-    
-        private void InputManagerOnTouchMoved(Vector2 screenPoint)
-        {
-            if (_item)
-            {
+                Subscribe();       
+                StartMove();
                 Move(screenPoint);
             }
         }
-    
-        private void InputManagerOnTouchExit(Vector2 screenPoint)
+
+        /// <summary>
+        /// Define plane above ground where item will be dragged
+        /// </summary>
+        public void StartMove()
         {
-            if (_item)
+            _plane = new Plane(Vector3.up, Vector3.up * GapFromGround);
+        }
+        
+        /// <summary>
+        /// Raycast to defined plane to place item on its surface 
+        /// </summary>
+        /// <param name="item">Item to drag</param>
+        /// <param name="screenPoint">Point in screen dimension</param>
+        public void Move(Item item, Vector2 screenPoint)
+        {
+            var ray = _inputManager.cam.ScreenPointToRay(screenPoint);
+            if(_plane.Raycast(ray, out var distance))
             {
-                _item.EnablePhysics();
-                ItemReleased?.Invoke(_item);
-                _item = null;
+                item.transform.position = ray.GetPoint(distance);
             }
         }
 
-        private void Move(Vector2 screenPoint)
+        /// <summary>
+        /// Raycast to defined plane to place item on its surface 
+        /// </summary>
+        /// <param name="screenPoint">Point in screen dimension</param>
+        public void Move(Vector2 screenPoint)
         {
-            var ray = _cam.ScreenPointToRay(screenPoint);
-            if(_plane.Raycast(ray, out var distance))
-            {
-                _item.transform.position = ray.GetPoint(distance);
-            }
+            Move(_item, screenPoint);
+        }
+
+        /// <summary>
+        /// Subscribe to pressed mouse movement and stop pressing events 
+        /// </summary>
+        public void Subscribe()
+        {
+            _inputManager.TouchMoved += InputManagerOnTouchMoved;
+            _inputManager.TouchExit += InputManagerOnTouchExit;
+        }
+
+        /// <summary>
+        /// Move item to place in virtual world under screen point
+        /// </summary>
+        /// <param name="screenPoint">Point in screen dimension</param>
+        private void InputManagerOnTouchMoved(Vector2 screenPoint)
+        {
+            Move(screenPoint);
+        }
+
+        /// <summary>
+        ///  Stop dragging item, enable physics to drop it and unsubscribe from events
+        /// </summary>
+        /// <param name="screenPoint">Point in screen dimension</param>
+        private void InputManagerOnTouchExit(Vector2 screenPoint)
+        {
+            Unsubscribe();
+            _item.EnablePhysics();
+            ItemReleased?.Invoke(_item, screenPoint);
+        }
+
+        /// <summary>
+        /// Unsubscribe from pressed mouse movement and from stop pressing 
+        /// </summary>
+        private void Unsubscribe()
+        {
+            _inputManager.TouchMoved -= InputManagerOnTouchMoved;
+            _inputManager.TouchExit -= InputManagerOnTouchExit;
         }
     }
 }

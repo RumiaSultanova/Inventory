@@ -1,5 +1,6 @@
 ﻿using Modules.BusinessLogic.Inventory.Item;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 namespace Modules.UI.Inventory
@@ -9,28 +10,57 @@ namespace Modules.UI.Inventory
         [SerializeField] private Text nameText;
         [SerializeField] private Image iconImage;
 
-        private Item _item;
+        [SerializeField] private Button button;
+        private EventTrigger _trigger;
 
+        public Item Item { get; private set; }
+
+        public delegate void OnInput(Item item);
+        public event OnInput PointerExit;
+        
         private void Awake()
         {
-            Deactivate();
+            SetupTrigger();
+            Reset();
         }
 
-        public void SetItem(Item item)
+        /// <summary>
+        /// Initialize listener to stop pressing mouse on its UI
+        /// </summary>
+        private void SetupTrigger()
         {
-            nameText.text = item.ItemData.ItemName;
-            iconImage.sprite = item.ItemData.Sprite;
+            _trigger = gameObject.AddComponent<EventTrigger>();
+
+            var pointerExit = new EventTrigger.Entry {eventID = EventTriggerType.PointerExit};
+            pointerExit.callback.AddListener(item => PointerExit?.Invoke(Item));
+            _trigger.triggers.Add(pointerExit);
         }
 
+        /// <summary>
+        /// Add new item to UI, make interactable and fill name text field and icon image
+        /// </summary>
+        /// <param name="item">Added item</param>
+        public void AddItem(Item item)
+        {
+            Item = item;
+            
+            nameText.text = Item.ItemData.ItemName;
+            iconImage.sprite = Item.ItemData.Sprite;
+           
+            button.interactable = true;
+            _trigger.enabled = true;
+        }
+
+        /// <summary>
+        /// Remove item data from UI and make non-interactable 
+        /// </summary>
         public void Reset()
-        {
-            Deactivate();
-        }
-
-        private void Deactivate()
         {
             nameText.text = "";
             iconImage.sprite = null;
+
+            button.interactable = false;
+            _trigger.enabled = false;
         }
     }
 }
