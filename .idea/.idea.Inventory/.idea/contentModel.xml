@@ -2,25 +2,53 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="C:\Users\rumia\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\rumia\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_Inventory.-1016853077.00" t="ExcludeRecursive" />
-    <e p="C:\Users\rumia\Downloads\Unity\Inventory" t="IncludeRecursive">
+    <e p="C:\Users\rumia\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_Inventory.-2031622145.00" t="ExcludeRecursive" />
+    <e p="C:\Users\rumia\Downloads\Unity\Personal\Inventory" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
           <e p="Model" t="Include">
             <e p="Item" t="Include">
+              <e p="ItemState.cs" t="Include" />
               <e p="ItemType.cs" t="Include" />
             </e>
           </e>
           <e p="Modules" t="Include">
-            <e p="Inventory" t="Include">
-              <e p="Item" t="Include">
-                <e p="Item.cs" t="Include" />
-                <e p="ItemDragHandler.cs" t="Include" />
+            <e p="BusinessLogic" t="Include">
+              <e p="Core" t="Include">
+                <e p="Manager.cs" t="Include" />
+              </e>
+              <e p="CustomInput" t="Include">
+                <e p="InputManager.cs" t="Include" />
+              </e>
+              <e p="DataProvider" t="Include">
+                <e p="DataProviderManager.cs" t="Include" />
+              </e>
+              <e p="Inventory" t="Include">
+                <e p="InventoryManager.cs" t="Include" />
+                <e p="Item" t="Include">
+                  <e p="Item.cs" t="Include" />
+                  <e p="ItemData.cs" t="Include" />
+                </e>
+              </e>
+              <e p="Player" t="Include">
+                <e p="DragManager.cs" t="Include" />
+                <e p="SnapManager.cs" t="Include" />
+              </e>
+              <e p="Session" t="Include">
+                <e p="Level.cs" t="Include" />
+                <e p="SessionManager.cs" t="Include" />
               </e>
             </e>
-            <e p="Session" t="Include">
-              <e p="SessionController.cs" t="Include" />
+            <e p="UI" t="Include">
+              <e p="Inventory" t="Include">
+                <e p="InventoryUI.cs" t="Include" />
+                <e p="ItemUI.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Utils" t="Include">
+              <e p="AssetNames.cs" t="Include" />
+              <e p="LookToCamera.cs" t="Include" />
             </e>
           </e>
         </e>
