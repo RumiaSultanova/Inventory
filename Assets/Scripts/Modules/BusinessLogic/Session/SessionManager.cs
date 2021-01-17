@@ -18,7 +18,7 @@ namespace Modules.BusinessLogic.Session
 
             DragManager = new DragManager(InputManager);
             SnapManager = new SnapManager(DragManager);
-            InventoryManager = new InventoryManager(SnapManager);
+            InventoryManager = new InventoryManager(InputManager, SnapManager);
         }
     }
 }

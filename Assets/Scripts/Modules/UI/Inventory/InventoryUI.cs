@@ -9,19 +9,22 @@ namespace Modules.UI.Inventory
     public class InventoryUI : MonoBehaviour
     {
         [SerializeField] private Transform content;
-
+        [SerializeField] private Canvas canvas;
+        
         private readonly List<(bool, ItemUI)> _cells = new List<(bool, ItemUI)>();
         
         private const int MaxCount = 3;
+
+        public bool IsActive => canvas.enabled;
         
         private void Awake()
         {
-            SetupUI();
+            SetupGrid();
         }
 
-        private async void SetupUI()
+        private async void SetupGrid()
         {
-            for (int i = 0; i < MaxCount; i++)
+            for (var i = 0; i < MaxCount; i++)
             {
                 var itemUI =  await Addressables.InstantiateAsync(AssetNames.ItemUI).Task;
                 itemUI.transform.SetParent(content, false);
@@ -41,6 +44,16 @@ namespace Modules.UI.Inventory
                 _cells[i] = cell;
                 break;
             }
+        }
+
+        public void Activate()
+        {
+            canvas.enabled = true;
+        }
+
+        public void Deactivate()
+        {
+            canvas.enabled = false;
         }
     }
 }

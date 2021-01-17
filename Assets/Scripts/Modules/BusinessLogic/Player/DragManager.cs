@@ -6,35 +6,31 @@ namespace Modules.BusinessLogic.Player
 {
     public class DragManager
     {
-        private readonly Camera _cam;
-        private readonly LayerMask _itemLayer;
         private const float GapFromGround = 1;
 
         private Plane _plane;
         private Item _item;
-    
-        public delegate void OnItem(Item item);
+
+        public readonly InputManager InputManager;
+        
+        public delegate void OnItem(Item item, Vector2 screenPoint);
         public event OnItem ItemReleased;
         
         public DragManager(InputManager inputManager)
         {
-            inputManager.TouchEnter += InputManagerOnTouchEnter;
-            inputManager.TouchMoved += InputManagerOnTouchMoved;
-            inputManager.TouchExit += InputManagerOnTouchExit;
-        
-            _cam = Camera.main;
-            _itemLayer = LayerMask.NameToLayer("Item");
+            (InputManager = inputManager).TouchEnter += InputManagerOnTouchEnter;
+            InputManager.TouchMoved += InputManagerOnTouchMoved;
+            InputManager.TouchExit += InputManagerOnTouchExit;
         }
 
         private void InputManagerOnTouchEnter(Vector2 screenPoint)
         {
-            if (Physics.Raycast(_cam.ScreenPointToRay(screenPoint), out var hit, _itemLayer) &&
-                (_item = hit.collider.GetComponent<Item>()))
+            if (InputManager.CheckItemTouched(screenPoint, out _item))
             {
-                _item = hit.collider.GetComponent<Item>();
                 _item.DisablePhysics();
                 
                 _plane = new Plane(Vector3.up, Vector3.up * GapFromGround);
+                Move(screenPoint);
             }
         }
     
@@ -51,14 +47,14 @@ namespace Modules.BusinessLogic.Player
             if (_item)
             {
                 _item.EnablePhysics();
-                ItemReleased?.Invoke(_item);
+                ItemReleased?.Invoke(_item, screenPoint);
                 _item = null;
             }
         }
 
         private void Move(Vector2 screenPoint)
         {
-            var ray = _cam.ScreenPointToRay(screenPoint);
+            var ray = InputManager.cam.ScreenPointToRay(screenPoint);
             if(_plane.Raycast(ray, out var distance))
             {
                 _item.transform.position = ray.GetPoint(distance);

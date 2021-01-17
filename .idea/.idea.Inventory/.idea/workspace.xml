@@ -4,25 +4,8 @@
     <list default="true" id="499aa781-df8e-4c9c-973f-af4ad632fbf3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Inventory/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Inventory/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Inventory/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Inventory/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/3D/Bag.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/3D/Bag.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/3D/Item.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/3D/Item.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Inventory.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Inventory.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Item.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Item.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Prod/ProdMain.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Prod/ProdMain.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Model/Item/ItemType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Model/Item/ItemType.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/BusinessLogic/CustomInput.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/BusinessLogic/CustomInput/InputManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/BusinessLogic/CustomInput/InputManager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/BusinessLogic/Inventory/Item/ItemData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/BusinessLogic/Inventory/Item/ItemData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/BusinessLogic/Player/InventoryManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/BusinessLogic/Player/InventoryManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/BusinessLogic/Player/DragManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/BusinessLogic/Player/DragManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/BusinessLogic/Player/SnapManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/BusinessLogic/Player/SnapManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/BusinessLogic/Session/SessionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/BusinessLogic/Session/SessionManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/UI/Inventory/InventoryUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/UI/Inventory/InventoryUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/UI/Inventory/ItemUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/UI/Inventory/ItemUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Modules/Utils/AssetNames.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Modules/Utils/AssetNames.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,14 +16,13 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/../../../../../Program Files/Unity/Hub/Editor/2019.4.4f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Image.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A979F18D-51AF-4117-9D12-B797E8C5BE14/d0/d69061d1/UnitySynchronizationContext.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Modules/Utils/AssetNames.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Modules/BusinessLogic/Inventory/InventoryManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Modules/UI/Inventory/InventoryUI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A979F18D-51AF-4117-9D12-B797E8C5BE14/d0/d69061d1/UnitySynchronizationContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Modules/Utils/AssetNames.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Modules/UI/Inventory/ItemUI.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5990EEDA-2CCC-4C8D-9AB6-99E19088962F/b1/40b4aba5/IDragHandler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Model/Item/ItemType.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5990EEDA-2CCC-4C8D-9AB6-99E19088962F/b1/40b4aba5/IDragHandler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/FB001E01-371B-4ADC-A200-13E0AC763896/4b/77efe45f/SynchronizationContext.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -74,7 +56,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Modules/Utils/LookToCamera.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Modules/BusinessLogic/Inventory/Item/Item.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Modules/BusinessLogic/CustomInput/InputManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Modules/BusinessLogic/Player/DragManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Modules/BusinessLogic/Player/InventoryManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Modules/BusinessLogic/Inventory/Item/ItemData.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Modules/BusinessLogic/Player/Inventory.cs" />
@@ -82,10 +63,11 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Modules/BusinessLogic/Session/SessionManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Modules/Utils/AssetNames.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Modules/BusinessLogic/Inventory/InventoryManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Modules/BusinessLogic/Player/SnapManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Modules/UI/Inventory/ItemUI.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Modules/UI/Inventory/InventoryUI.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Model/Item/ItemType.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Modules/BusinessLogic/Player/SnapManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Modules/BusinessLogic/Player/DragManager.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1n8xY0CUbB59OFFMoFtaRD95Yhe" />
@@ -115,10 +97,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="24920">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="18244">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="24920" />
+      <option name="pid" value="18244" />
       <option name="selectedOptions">
         <list />
       </option>
@@ -135,6 +117,7 @@
       <updated>1610785565165</updated>
       <workItem from="1610785581560" duration="15714000" />
       <workItem from="1610877017373" duration="5005000" />
+      <workItem from="1610883341540" duration="924000" />
     </task>
     <task id="LOCAL-00001" summary="Initial">
       <created>1610790575728</created>

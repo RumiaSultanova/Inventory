@@ -1,10 +1,14 @@
 ﻿using System;
+using Modules.BusinessLogic.Inventory.Item;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 namespace Modules.BusinessLogic.CustomInput
 {
     public class InputManager : MonoBehaviour
     {
+        public Camera cam;
+
         public delegate void OnInput(Vector2 screenPoint);
         public event OnInput TouchEnter;
         public event OnInput TouchStay;
@@ -13,6 +17,16 @@ namespace Modules.BusinessLogic.CustomInput
 
         private const float MoveDelta = .05f;
         
+        private int _itemLayer;
+        private int _bagLayer;
+
+        private void Awake()
+        {
+            cam = Camera.main;
+            _itemLayer = LayerMask.GetMask("Item");
+            _bagLayer = LayerMask.GetMask("Bag");
+        }
+
         private void Update()
         {
             if (Input.GetMouseButtonDown(0))
@@ -31,6 +45,28 @@ namespace Modules.BusinessLogic.CustomInput
             {
                 TouchExit?.Invoke(Input.mousePosition);
             }
+        }
+
+        public bool CheckItemTouched(Vector2 screenPoint, out Item item)
+        {
+            if (Physics.Raycast(cam.ScreenPointToRay(screenPoint), out var hit, 100f, _itemLayer))
+            {
+                item = hit.collider.GetComponent<Item>();
+                return true;
+            }
+
+            item = null;
+            return false;
+        }
+
+        public bool CheckBagTouched(Vector2 screenPoint)
+        {
+            return Physics.Raycast(cam.ScreenPointToRay(screenPoint), out _, 100f, _bagLayer);
+        }
+
+        public bool CheckUITouched()
+        {
+            return EventSystem.current.IsPointerOverGameObject();
         }
     }
 }
