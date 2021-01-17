@@ -15,8 +15,9 @@ namespace Modules.UI.Inventory
         
         private const int MaxCount = 3;
 
-        public bool IsActive => canvas.enabled;
-        
+        public delegate void OnInput(Item item);
+        public event OnInput PointerExit;
+
         private void Awake()
         {
             SetupGrid();
@@ -26,13 +27,14 @@ namespace Modules.UI.Inventory
         {
             for (var i = 0; i < MaxCount; i++)
             {
-                var itemUI =  await Addressables.InstantiateAsync(AssetNames.ItemUI).Task;
+                var itemUI = (await Addressables.InstantiateAsync(AssetNames.ItemUI).Task).GetComponent<ItemUI>();
                 itemUI.transform.SetParent(content, false);
-                _cells.Add((false, itemUI.GetComponent<ItemUI>()));
+                itemUI.PointerExit += item => PointerExit?.Invoke(item);
+                _cells.Add((false, itemUI));
             }
         }
 
-        public void Add(Item item)
+        public void AddItem(Item item)
         {
             for (var i = 0; i < _cells.Count; i++)
             {
@@ -40,10 +42,25 @@ namespace Modules.UI.Inventory
                 if (cell.Item1) { continue; }
                 
                 cell.Item1 = true;
-                cell.Item2.SetItem(item);
+                cell.Item2.AddItem(item);
                 _cells[i] = cell;
                 break;
             }
+        }
+
+        public void SelectItem(Item item)
+        {
+            for (var i = 0; i < _cells.Count; i++)
+            {
+                var cell = _cells[i];
+                if (cell.Item2.Item == item)
+                {
+                    cell.Item2.Reset();
+                    cell.Item1 = false;
+                    _cells[i] = cell;
+                }
+            }
+
         }
 
         public void Activate()

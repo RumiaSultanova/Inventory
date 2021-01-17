@@ -1,64 +1,82 @@
-﻿using Modules.BusinessLogic.CustomInput;
+﻿using Modules.BusinessLogic.Core;
+using Modules.BusinessLogic.CustomInput;
 using Modules.BusinessLogic.Inventory.Item;
+using Modules.BusinessLogic.Session;
 using UnityEngine;
 
 namespace Modules.BusinessLogic.Player
 {
-    public class DragManager
+    public class DragManager : Manager
     {
         private const float GapFromGround = 1;
 
         private Plane _plane;
         private Item _item;
 
-        public readonly InputManager InputManager;
+        private InputManager _inputManager;
         
         public delegate void OnItem(Item item, Vector2 screenPoint);
         public event OnItem ItemReleased;
         
-        public DragManager(InputManager inputManager)
+        public override void Inject(SessionManager session)
         {
-            (InputManager = inputManager).TouchEnter += InputManagerOnTouchEnter;
-            InputManager.TouchMoved += InputManagerOnTouchMoved;
-            InputManager.TouchExit += InputManagerOnTouchExit;
+            (_inputManager = session.InputManager).TouchEnter += InputManagerOnTouchEnter;
         }
 
+        
         private void InputManagerOnTouchEnter(Vector2 screenPoint)
         {
-            if (InputManager.CheckItemTouched(screenPoint, out _item))
+            if (_inputManager.CheckItemTouched(screenPoint, out _item))
             {
                 _item.DisablePhysics();
-                
-                _plane = new Plane(Vector3.up, Vector3.up * GapFromGround);
+                Subscribe();       
+                StartMove();
                 Move(screenPoint);
-            }
-        }
-    
-        private void InputManagerOnTouchMoved(Vector2 screenPoint)
-        {
-            if (_item)
-            {
-                Move(screenPoint);
-            }
-        }
-    
-        private void InputManagerOnTouchExit(Vector2 screenPoint)
-        {
-            if (_item)
-            {
-                _item.EnablePhysics();
-                ItemReleased?.Invoke(_item, screenPoint);
-                _item = null;
             }
         }
 
-        private void Move(Vector2 screenPoint)
+        public void StartMove()
         {
-            var ray = InputManager.cam.ScreenPointToRay(screenPoint);
+            _plane = new Plane(Vector3.up, Vector3.up * GapFromGround);
+        }
+        
+        public void Move(Item item, Vector2 screenPoint)
+        {
+            var ray = _inputManager.cam.ScreenPointToRay(screenPoint);
             if(_plane.Raycast(ray, out var distance))
             {
-                _item.transform.position = ray.GetPoint(distance);
+                item.transform.position = ray.GetPoint(distance);
             }
+        }
+
+        public void Move(Vector2 screenPoint)
+        {
+            Move(_item, screenPoint);
+        }
+
+        public void Subscribe()
+        {
+            _inputManager.TouchMoved += InputManagerOnTouchMoved;
+            _inputManager.TouchExit += InputManagerOnTouchExit;
+        }
+
+        private void InputManagerOnTouchMoved(Vector2 screenPoint)
+        {
+            Move(screenPoint);
+        }
+
+
+        private void InputManagerOnTouchExit(Vector2 screenPoint)
+        {
+            Unsubscribe();
+            _item.EnablePhysics();
+            ItemReleased?.Invoke(_item, screenPoint);
+        }
+
+        private void Unsubscribe()
+        {
+            _inputManager.TouchMoved -= InputManagerOnTouchMoved;
+            _inputManager.TouchExit -= InputManagerOnTouchExit;
         }
     }
 }

@@ -1,26 +1,42 @@
-﻿using System.Collections.Generic;
+﻿using Modules.BusinessLogic.Core;
 using Modules.BusinessLogic.CustomInput;
-using Modules.BusinessLogic.Player;
+using Modules.BusinessLogic.Session;
 using Modules.UI.Inventory;
 using UnityEngine;
 
 namespace Modules.BusinessLogic.Inventory
 {
-    public class InventoryManager
+    public class InventoryManager : Manager
     {
-        private readonly List<Item.Item> _items = new List<Item.Item>();
-        private readonly InventoryUI _inventoryUI;
+        private InventoryUI _inventoryUI;
 
-        private readonly InputManager _inputManager;
+        private InputManager _inputManager;
+
+        public delegate void OnInput(Item.Item item);
+        public event OnInput Selected;
         
-        public InventoryManager(InputManager inputManager, SnapManager snapManager)
+        public override void Inject(SessionManager session)
         {
-            (_inputManager = inputManager).TouchEnter += InputManagerOnTouchEnter;
-            snapManager.ItemSnapped += SnapManagerOnItemSnapped;
-
-            _inventoryUI = Object.FindObjectOfType<InventoryUI>();
+            _inventoryUI = session.Level.InventoryUI;
+            _inventoryUI.PointerExit += InventoryOnPointerExit;
+            session.SnapManager.ItemSnapped += SnapManagerOnItemAdded;
+            (_inputManager = session.InputManager).TouchEnter += InputManagerOnTouchEnter;
         }
 
+        private void SnapManagerOnItemAdded(Item.Item item)
+        {
+            _inventoryUI.AddItem(item);
+        }
+        
+        private void InventoryOnPointerExit(Item.Item item)
+        {
+            if (!_inputManager.IsTouching)
+            {
+                _inventoryUI.SelectItem(item);
+                Selected?.Invoke(item);
+            }
+        }
+        
         private void InputManagerOnTouchEnter(Vector2 screenPoint)
         {
             if (_inputManager.CheckBagTouched(screenPoint))
@@ -37,12 +53,6 @@ namespace Modules.BusinessLogic.Inventory
             {
                 DeactivateInventory(screenPoint);
             }
-        }
-        
-        private void SnapManagerOnItemSnapped(Item.Item item)
-        {
-            _inventoryUI.Add(item);
-            _items.Add(item);
         }
         
         private void DeactivateInventory(Vector2 screenPoint)

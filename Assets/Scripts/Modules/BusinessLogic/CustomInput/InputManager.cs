@@ -9,6 +9,9 @@ namespace Modules.BusinessLogic.CustomInput
     {
         public Camera cam;
 
+        public bool IsTouching => _isTouching;
+        private bool _isTouching;
+
         public delegate void OnInput(Vector2 screenPoint);
         public event OnInput TouchEnter;
         public event OnInput TouchStay;
@@ -31,6 +34,7 @@ namespace Modules.BusinessLogic.CustomInput
         {
             if (Input.GetMouseButtonDown(0))
             {
+                _isTouching = true;
                 TouchEnter?.Invoke(Input.mousePosition);
             }
 
@@ -43,6 +47,7 @@ namespace Modules.BusinessLogic.CustomInput
 
             if (Input.GetMouseButtonUp(0))
             {
+                _isTouching = false;
                 TouchExit?.Invoke(Input.mousePosition);
             }
         }
