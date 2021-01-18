@@ -70,7 +70,7 @@ namespace Modules.BusinessLogic.Player
         }
 
         /// <summary>
-        /// Subscribe to pressed mouse movement and stop pressing events 
+        /// Subscribe to pressing mouse movement and stop pressing events 
         /// </summary>
         public void Subscribe()
         {
@@ -99,7 +99,7 @@ namespace Modules.BusinessLogic.Player
         }
 
         /// <summary>
-        /// Unsubscribe from pressed mouse movement and from stop pressing 
+        /// Unsubscribe from pressing mouse movement and from stop pressing events
         /// </summary>
         private void Unsubscribe()
         {

@@ -25,7 +25,7 @@ namespace Modules.UI.Inventory
         }
 
         /// <summary>
-        /// Initialize listener to stop pressing mouse on its UI
+        /// Initialize listener of stop pressing mouse on item's UI
         /// </summary>
         private void SetupTrigger()
         {
