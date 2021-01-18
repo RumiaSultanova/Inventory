@@ -22,7 +22,7 @@ namespace Modules.BusinessLogic.DataProvider
         /// </summary>
         /// <param name="id">Item unique id</param>
         /// <param name="state">Updated item state</param>
-        public void ChangeItemStatus(int id, ItemState state)
+        private void ChangeItemStatus(int id, ItemState state)
         {
             var client = new RestClient(StatusURL) {Timeout = -1};
             

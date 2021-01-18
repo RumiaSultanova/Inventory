@@ -4,6 +4,9 @@ using UnityEngine;
 
 namespace Modules.BusinessLogic.Session
 {
+    /// <summary>
+    /// Defined for certain level to manage level 3D and UI content
+    /// </summary>
     public class Level : MonoBehaviour
     {
         [SerializeField] private GameObject bag;

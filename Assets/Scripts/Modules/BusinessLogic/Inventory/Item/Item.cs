@@ -22,7 +22,7 @@ namespace Modules.BusinessLogic.Inventory.Item
         }
 
         /// <summary>
-        /// Enable physics after manual interaction to allow object interact with virtual world
+        /// Enable physics to allow object interact with virtual world
         /// </summary>
         public void EnablePhysics()
         {

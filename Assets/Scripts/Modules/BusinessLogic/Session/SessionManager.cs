@@ -8,6 +8,9 @@ using UnityEngine;
 
 namespace Modules.BusinessLogic.Session
 {
+    /// <summary>
+    /// Defined for certain level to manage services and theirs interactions
+    /// </summary>
     public class SessionManager : MonoBehaviour
     {
         [SerializeField] private Level level;

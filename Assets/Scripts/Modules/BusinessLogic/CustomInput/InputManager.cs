@@ -56,11 +56,11 @@ namespace Modules.BusinessLogic.CustomInput
         }
 
         /// <summary>
-        ///  Raycast from screenPoint to check if there is an object of Item layer
+        ///  Raycast from screenPoint to check if there is an object in Item layer
         /// </summary>
         /// <param name="screenPoint">Point in screen dimension</param>
-        /// <param name="item">If there is an object with component ot Item type fill out param with value</param>
-        /// <returns>If there is an object with component ot Item type</returns>
+        /// <param name="item">If there is an object with component of Item type fill out param with value</param>
+        /// <returns>If there is an object with component in Item type</returns>
         public bool CheckItemTouched(Vector2 screenPoint, out Item item)
         {
             if (Physics.Raycast(cam.ScreenPointToRay(screenPoint), out var hit, 100f, _itemLayer))
@@ -74,10 +74,10 @@ namespace Modules.BusinessLogic.CustomInput
         }
 
         /// <summary>
-        ///  Raycast from screenPoint to check if there is an object on Bag layer
+        ///  Raycast from screenPoint to check if there is an object in Bag layer
         /// </summary>
         /// <param name="screenPoint">Point in screen dimension</param>
-        /// <returns>If there is an object on Bag layer</returns>
+        /// <returns>If there is an object in Bag layer</returns>
         public bool CheckBagTouched(Vector2 screenPoint)
         {
             return Physics.Raycast(cam.ScreenPointToRay(screenPoint), out _, 100f, _bagLayer);
@@ -86,7 +86,7 @@ namespace Modules.BusinessLogic.CustomInput
         /// <summary>
         /// Check if mouse is over UI
         /// </summary>
-        /// <returns>if mouse is over UI</returns>
+        /// <returns>If mouse is over UI</returns>
         public bool CheckUITouched()
         {
             return EventSystem.current.IsPointerOverGameObject();
